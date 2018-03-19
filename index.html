@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Shopping</title>
+    <title>Cloudplaces MVP</title>
     <meta name="description" content="Cloudplaces MVP">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
@@ -10,6 +10,7 @@
     <a-scene background="color: #ECECEC">
       <a-assets>
         <a-asset-item id="projector" src="poly/projector/model.gltf"></a-asset-item>
+        <a-asset-item id="blackboard" src="poly/blackboard/blackboard.gltf"></a-asset-item>
       </a-assets>
 
      <!-- <a-entity id="model" position="0 0 -3">
@@ -56,13 +57,35 @@
         <a-cylinder position="0 0.5 0" radius="4" height="1.6" side="back" open-ended="true"
                     color="#FFF"></a-cylinder>
       </a-entity>
-      <a-gltf-model src="#projector">
-        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000"
-        easing="linear" repeat="indefinite"></a-animation>
+
+
+      <a-gltf-model src="#projector" position="0 1 -3">
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
       </a-gltf-model>
+
+      <a-gltf-model src="#blackboard" position="1.2 1.5 0" rotation="-10 -90 90" gltf-model="poly/blackboard/blackboard.gltf">
+        <a-entity position="0 0 0.2" id="p" text__event1="value:TNDS Public Presentation\n OOOOO;color:#ba000d;width:2;align:center" rotation="0 0 -90.01166961505233"></a-entity>
+      </a-gltf-model>
+        
+      </a-gltf-model>
+
+      <a-entity id="events" position="14.71 1.825 -24.811" rotation="16.214705602202297 -52.941 -20.340001727144223">
+        <a-entity id="eventplane-23-03-2018" geometry="primitive:plane;height:5;width:5" position="-4 0.25 25" material="side: double; color: #bcbcbc; transparent: true; opacity: 0.5" rotation="-90 90 0"></a-entity>
+        <a-entity id="timeline" geometry="depth:80;height:0.2;width:0.2" material="color:#b0bec5">
+          <a-entity id="eventplane-23-03-2018" geometry="primitive:plane;height:5;width:5" position="-4 0.25 25" material="side: double; color: #bcbcbc; transparent: true; opacity: 0.5" rotation="-90 90 0">
+                <a-entity position="4.654 1.663 0" id="h1" text__event1="value:23 March;color:#ba000d;width:10"></a-entity>    
+                <a-entity position="4.654 1.2 0" id="p" text__event1="value:TNDS Public Presentation;color:#ba000d;width:10"></a-entity>    
+            </a-entity>
+          <a-entity id="today" geometry="primitive:plane;height:0.25;width:1" position="6 0 25" material="side: double; color: #bcbcbc; transparent: true; opacity: 1" rotation="90 90 90">
+                  <a-entity id="h1" text__event1="value:Today;color:#ba000d;width:20;align:center" rotation="0 180 -90"></a-entity>
+                  <a-entity id="todayMarker" geometry="depth:1;height:0.2;width:0.2" material="color:#b0bec5" rotation="0 180 -90"></a-entity>  
+          </a-entity> 
+        </a-entity>     
+      </a-entity>
 
       <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
       <a-light type="ambient" color="#fff"></a-light>
+      <a-entity position="0 1.6 0" camera look-controls></a-entity>
     </a-scene>
   </body>
 </html>
