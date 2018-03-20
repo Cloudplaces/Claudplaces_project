@@ -18,7 +18,12 @@
         <a-asset-item id="marker" src="poly/marker/model.gltf"></a-asset-item>
         <img id="founders_logo" src="pngs/founders/founders.png">
         <img id="founders_building" src="pngs/founders/building.png">
-        <img id="emitu" src="pngs/residents/emitu.png">
+        <img id="acsendo" src="pngs/residents/acsendo.jpg">
+        <img id="emitu" src="pngs/residents/emitu.jpg">
+        <img id="xhockware" src="pngs/residents/xhockware.jpg">
+        <img id="3decide" src="pngs/residents/3decide.jpg">
+        <img id="adapttech" src="pngs/residents/adapttech.jpg">
+        <img id="tonicapp" src="pngs/residents/tonicapp.jpg">
       </a-assets>
 
       <a-entity id="cylinder">
@@ -59,50 +64,42 @@
           <a-gltf-model id="burguer" src="#burguer" position="-0.024 -0.159 0.093" rotation="-25.38203032429547 3.8961130068895984 -26.069579678452456" scale="0.03 0.03 0.03" gltf-model="poly/burguer/Hamburger_01.gltf"></a-gltf-model>
           <a-gltf-model id="bowl" src="#bowl" position="-0.512 -0.399 0.272" rotation="-33.518031015153156 -19.881635491039564 -90.52733163067008" scale="0.04 0.04 0.04" gltf-model="poly/bowl/Bowl_01.gltf"></a-gltf-model>
         </a-gltf-model>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> c12eef9b198bfb500cf04b8262ed320460c77286
       </a-entity>
 
-      <!--
-      **************Logos***********+
-      -->
-      <a-entity id="logos" position="-3.28 1.761 1.5" rotation="0 90.01166961505233 0" scale="0.5 0.5 0.5">
-<<<<<<< HEAD
-        
-        <a-entity geometry="" id="logobox"  
-        event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-        event-set__leave="_event: mouseleave; scale: 1 1 1"    
-        material="src:#emitu" >
-        </a-entity>
-=======
+      <!--Logos-->
 
-          <a-entity geometry="" id="logobox"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1">
-          </a-entity>
->>>>>>> c12eef9b198bfb500cf04b8262ed320460c77286
+      <a-entity id="logos" position="-3.28 1.761 1.5" rotation="0 90.01166961505233 0" scale="0.5 0.5 0.5">
+        
+        <a-entity geometry="primitive:plane;height:2.5" id="0" position="-1.5 0.75 0" ></a-entity>
+        <a-entity geometry="" id="logobox"  
+          event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+          event-set__leave="_event: mouseleave; scale: 1 1 1"    
+          material="src:#acsendo" >
+        </a-entity>
           <a-entity position="1.5 0 0" geometry="" id="logobox-2"
             event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1">
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#emitu">
           </a-entity>
           <a-entity position="3 0 0" geometry="" id="logobox-3"
             event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1">
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#xhockware">
           </a-entity>
-          <a-entity position="4.5 0 0" geometry="" id="logobox-4"
+          <a-entity position="0 1.5 0" geometry="" id="logobox-4"
             event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1">
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#3decide">
           </a-entity>
-          <a-entity position="6 0 0" geometry="" id="logobox-5"
+          <a-entity position="1.5 1.5 0" geometry="" id="logobox-5"
             event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1">
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#adapttech">
           </a-entity>
-          <a-entity position="0 1.5 0" geometry="" id="logobox-6"
+          <a-entity position="3 1.5 0" geometry="" id="logobox-6"
             event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1">
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#tonicapp">
           </a-entity>
           <a-entity position="1.5 1.5 0" geometry="" id="logobox-7"
             event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
@@ -126,17 +123,10 @@
           </a-entity>
 
         </a-entity>
-<<<<<<< HEAD
     
-      <a-light type="directional" color="#fff" position="3.487 7.081 1.876" rotation="-34.09098881028398 -121.75353146529994 20.683776404222723" light="intensity:2;castShadow:true"></a-light>
-      <!-- <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light> -->
-      <a-light type="ambient"  intensity="0.2" color="#fff"></a-light>
-=======
-
-
+      <!-- <a-light type="directional" color="#fff" position="3.487 7.081 1.876" rotation="-34.09098881028398 -121.75353146529994 20.683776404222723" light="intensity:2;castShadow:true"></a-light> -->
       <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
-      <a-light type="ambient" color="#fff"></a-light>
->>>>>>> c12eef9b198bfb500cf04b8262ed320460c77286
+      <a-light type="ambient"  intensity="0.2" color="#fff"></a-light>
       <a-entity position="0 1.6 0" camera look-controls>
         <a-cursor opacity="0.2"></a-cursor>
       </a-entity>
