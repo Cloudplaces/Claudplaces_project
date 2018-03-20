@@ -5,6 +5,7 @@
     <title>Cloudplaces MVP</title>
     <meta name="description" content="Cloudplaces MVP">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   </head>
   <body>
     <a-scene stats background="color: #ECECEC">
@@ -87,10 +88,7 @@
       
 
       <a-entity id="event" rotation="0 -180 0">
-        <a-entity position="0 1.5 -2.7" id="eventplane" geometry="primitive:plane;height:2" material="color:#c0c0c0">
-          <a-entity position="0 0.697 0.1" id="p-4" text__event1="value:UPCOMING\nEVENTS;color:#ba000d;width:3;align:center;tabSize:3"></a-entity>
-          <a-entity position="0 -0.141 0.1" id="p-3" text__event1="value:23 March \n\nTNDS \nPresentations;color:#ba000d;width:3;align:center;tabSize:2"></a-entity>
-        </a-entity>
+        <a-entity position="0 1.5 -2.7" id="eventplane" geometry="primitive:plane;height:2" material="color:#c0c0c0"></a-entity>
         <a-entity position="0 0.5 -2.2" rotation="-90.012 0 0" id="eventplane-2" geometry="primitive:plane" material="color:#c0c0c0"></a-entity>
         <a-gltf-model id="projector" src="#projector" position="0 1 -2">
           <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
@@ -112,17 +110,51 @@
       </a-entity>
 
       <a-entity id="logos" position="-3.28 1.761 1.5" rotation="0 90.01166961505233 0" scale="0.5 0.5 0.5">
-          <a-entity geometry="" id="logobox"></a-entity>
-          <a-entity position="1.5 0 0" geometry="" id="logobox-2"></a-entity>
-          <a-entity position="3 0 0" geometry="" id="logobox-3"></a-entity>
-          <a-entity position="4.5 0 0" geometry="" id="logobox-4"></a-entity>
-          <a-entity position="6 0 0" geometry="" id="logobox-5"></a-entity>
-          <a-entity position="0 1.5 0" geometry="" id="logobox-6"></a-entity>
-          <a-entity position="1.5 1.5 0" geometry="" id="logobox-7"></a-entity>
-          <a-entity position="3 1.5 0" geometry="" id="logobox-8"></a-entity>
-          <a-entity position="4.5 1.5 0" geometry="" id="logobox-9"></a-entity>
-          <a-entity position="6 1.5 0" geometry="" id="logobox-10"></a-entity>
-          <a-entity position="0 3 0" geometry="" id="logobox-11"></a-entity>
+        
+          <a-entity geometry="" id="logobox" 
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="1.5 0 0" geometry="" id="logobox-2"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="3 0 0" geometry="" id="logobox-3"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="4.5 0 0" geometry="" id="logobox-4"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="6 0 0" geometry="" id="logobox-5"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="0 1.5 0" geometry="" id="logobox-6"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="1.5 1.5 0" geometry="" id="logobox-7"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="3 1.5 0" geometry="" id="logobox-8"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+        </a-entity>
+          <a-entity position="4.5 1.5 0" geometry="" id="logobox-9"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="6 1.5 0" geometry="" id="logobox-10"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
+          <a-entity position="0 3 0" geometry="" id="logobox-11"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1">
+          </a-entity>
   
         </a-entity>
         
@@ -144,7 +176,9 @@
 
       <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
       <a-light type="ambient" color="#fff"></a-light>
-      <a-entity position="0 1.6 0" camera look-controls></a-entity>
+      <a-entity position="0 1.6 0" camera look-controls>
+        <a-cursor opacity="0.2"></a-cursor>
+      </a-entity>
       
     </a-scene>
   </body>
@@ -155,8 +189,3 @@
 
 
 
-
-
-
-<a-curvedimage id="founders_building" src="#founders_building" height="3.0" radius="4.5" theta-length="72" rotation="0 134.01482828109954 0" scale="0.8 0.8 0.8" position="0 1.5 0" material="" geometry="thetaLength:72">
-</a-curvedimage>
