@@ -13,8 +13,8 @@
       </style> -->
   </head>
   <body>
-    <a-scene  background="color: #ECECEC">
-
+    <a-scene  >
+      <!-- background="color: #ECECEC" -->
       <!-- Assets -->
 
       <a-assets>
@@ -48,9 +48,13 @@
         <img id="title_events" src="pngs/titles/events.png">
         <img id="title_menu" src="pngs/titles/today.png">
         <img id="title_residents" src="pngs/titles/residents.png">
+        <img id="hdri" src="pngs/hdri/milkyway.jpg">
       </a-assets>
 
       <!-- Cylinder -->
+
+      <a-sky src="#hdri"></a-sky>
+
 
       <a-entity id="cylinder">
         <a-cylinder position="0 0.5 0" radius="4" height="1.6" side="back" open-ended="true"
@@ -221,6 +225,7 @@
       <!-- Camera -->
 
       <a-entity position="0 1.6 0" camera look-controls>
+      <a-entity></a-entity>
         <a-cursor opacity="0.2"></a-cursor>
       </a-entity>
 
