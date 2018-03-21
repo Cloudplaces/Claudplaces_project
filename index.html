@@ -24,6 +24,7 @@
         <a-asset-item id="burguer" src="poly/burguer/Hamburger_01.gltf"></a-asset-item>
         <a-asset-item id="bowl" src="poly/bowl/Bowl_01.gltf"></a-asset-item>
         <a-asset-item id="marker" src="poly/marker/model.gltf"></a-asset-item>
+        <a-asset-item id="building" src="poly/building/model.gltf"></a-asset-item>
         <img id="founders_logo" src="pngs/founders/founders.png">
         <img id="founders_building" src="pngs/founders/building.png">
         <img id="acsendo" src="pngs/residents/acsendo.jpg">
@@ -90,8 +91,12 @@
                      dur="1000"></a-animation>
       </a-curvedimage>
 
-      <a-gltf-model id="marker" src="#marker" position="0 1 -2" scale="0.2 0.2 0.2" gltf-model="poly/marker/model.gltf">
+      <a-gltf-model id="marker" src="#marker" position="0 1.5 -2" scale="0.2 0.2 0.2" gltf-model="poly/marker/model.gltf">
         <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
+      </a-gltf-model>
+
+      <a-gltf-model id="building" src="#building" position="0 1 -2" scale="0.5 0.5 0.5" rotation="0 -30 0">
+        <!-- <a-animation attribute="rotation" from="0 -30 0" to="0 -390 0" dur="15000" easing="linear" repeat="indefinite"></a-animation> -->
       </a-gltf-model>
 
       <!-- Event -->
@@ -111,12 +116,37 @@
           <a-entity id="leg-1" position="-0.5 0.2 -0.03" geometry="depth:0.02;height:0.02;width:0.5" material="color:#482400"></a-entity>
           <a-entity id="leg-2" position="-0.5 -0.2 -0.03" geometry="depth:0.02;height:0.02;width:0.5" material="color:#482400"></a-entity>
           <a-entity id="leg-3" position="-0.233 0 -0.37" geometry="depth:0.02;height:0.02" material="color:#482400" rotation="0 -42.055102162602424 0"></a-entity>
-          <a-gltf-model id="chicken" src="#chicken" position="0.4625587287278791 -0.4161069495845332 0.3889218202331588" rotation="15.29797312999298 116.65420708863562 32.77318588148309" scale="0.3 0.3 0.3" gltf-model="poly/chicken/CHAHIN_DRUMSTICK_CHICKEN.gltf"></a-gltf-model>
-          <a-gltf-model id="burguer" src="#burguer" position="-0.024 -0.159 0.093" rotation="-25.38203032429547 3.8961130068895984 -26.069579678452456" scale="0.03 0.03 0.03" gltf-model="poly/burguer/Hamburger_01.gltf"></a-gltf-model>
-          <a-gltf-model id="bowl" src="#bowl" position="-0.512 -0.399 0.272" rotation="-33.518031015153156 -19.881635491039564 -90.52733163067008" scale="0.04 0.04 0.04" gltf-model="poly/bowl/Bowl_01.gltf"></a-gltf-model>
+          
+          <a-gltf-model id="chicken" src="#chicken" position="0.4625587287278791 -0.4161069495845332 0.3889218202331588" rotation="15.29797312999298 116.65420708863562 32.77318588148309" scale="0.3 0.3 0.3" gltf-model="poly/chicken/CHAHIN_DRUMSTICK_CHICKEN.gltf">
+            <a-animation attribute="rotation" from="15 116 32" to="15 125 49" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+          </a-gltf-model>
+          
+          <a-gltf-model id="burguer" src="#burguer" position="-0.024 -0.159 0.093" rotation="-25.38203032429547 3.8961130068895984 -26.069579678452456" scale="0.03 0.03 0.03" gltf-model="poly/burguer/Hamburger_01.gltf">
+            <a-animation attribute="rotation" from="-25 3.9 -26" to="-30 3.9 -40" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+          </a-gltf-model>
+          
+          <a-gltf-model id="bowl" src="#bowl" position="-0.512 -0.399 0.272" rotation="-33.518031015153156 -19.881635491039564 -90.52733163067008" scale="0.04 0.04 0.04" gltf-model="poly/bowl/Bowl_01.gltf">
+            <a-animation attribute="rotation" from="-33 -19 -85" to="-25 -19 -97" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+          </a-gltf-model>
+        
         </a-gltf-model>
-        <a-entity  id="menu" src="#menu" radius="5.7" theta-length="30" height="1" 
-        position="0 0 0" opacity="1" rotation="0 0 0" material="" geometry="">
+       
+        <a-entity id="menu"  geometry="height:2" src="#menu" height="1"  position="2.535 1.392 0.12"  rotation="-1.8907607239317168 -117.39905222230567 0.17188733853924698" material="src:#menu;opacity:0"
+          event-set__enter="_event: mouseenter; material:opacity: 1"
+          event-set__leave="_event: mouseleave; material:opacity: 0">
+          <a-entity id"placeholder"="" geometry="width:4" position="0.709 -0.047 1.264" scale="0.294 1.653 1" material="visible:false" id="placeholder"></a-entity>
+        </a-entity>   
+          
+
+          
+          
+        </a-entity>
+
+        
+        
+  
+        
+          </a-entity>
         </a-entity>
       </a-entity>
 
