@@ -13,8 +13,8 @@
       </style> -->
   </head>
   <body>
-    <a-scene  >
-      <!-- background="color: #ECECEC" -->
+    <a-scene  background="color: #ECECEC">
+
       <!-- Assets -->
 
       <a-assets>
@@ -49,11 +49,12 @@
         <img id="title_menu" src="pngs/titles/today.png">
         <img id="title_residents" src="pngs/titles/residents.png">
         <img id="hdri" src="pngs/hdri/milkyway.jpg">
+        <img id="menu" src="pngs/titles/menu.png">
       </a-assets>
 
       <!-- Cylinder -->
 
-      <a-sky src="#hdri"></a-sky>
+      <!-- <a-sky src="#hdri"></a-sky> -->
 
 
       <a-entity id="cylinder">
@@ -114,6 +115,9 @@
           <a-gltf-model id="burguer" src="#burguer" position="-0.024 -0.159 0.093" rotation="-25.38203032429547 3.8961130068895984 -26.069579678452456" scale="0.03 0.03 0.03" gltf-model="poly/burguer/Hamburger_01.gltf"></a-gltf-model>
           <a-gltf-model id="bowl" src="#bowl" position="-0.512 -0.399 0.272" rotation="-33.518031015153156 -19.881635491039564 -90.52733163067008" scale="0.04 0.04 0.04" gltf-model="poly/bowl/Bowl_01.gltf"></a-gltf-model>
         </a-gltf-model>
+        <a-entity  id="menu" src="#menu" radius="5.7" theta-length="30" height="1" 
+        position="0 0 0" opacity="1" rotation="0 0 0" material="" geometry="">
+        </a-entity>
       </a-entity>
 
       <!--Logos-->
