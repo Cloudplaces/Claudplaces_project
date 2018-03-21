@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+  <head><meta charset="utf-8">
     <title>Cloudplaces MVP</title>
     <meta name="description" content="Cloudplaces MVP">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
   </head>
   <body>
-    <a-scene stats background="color: #ECECEC">
+
+
+
+  <div>
+    <h1> WELCOMe TO FOUNDERS FOUNDSERS CLOUSDSPACE</h1>
+  </div>
+
+  <div>
+    <a-scene embedded stats background="color: #ECECEC">
 
       <!-- Assets -->
 
@@ -19,34 +27,35 @@
         <a-asset-item id="burguer" src="poly/burguer/Hamburger_01.gltf"></a-asset-item>
         <a-asset-item id="bowl" src="poly/bowl/Bowl_01.gltf"></a-asset-item>
         <a-asset-item id="marker" src="poly/marker/model.gltf"></a-asset-item>
-        <img id="founders_logo" src="pngs/founders/founders.png">
-        <img id="founders_building" src="pngs/founders/building.png">
-        <img id="acsendo" src="pngs/residents/acsendo.jpg">
-        <img id="emitu" src="pngs/residents/emitu.jpg">
-        <img id="xhockware" src="pngs/residents/xhockware.jpg">
-        <img id="3decide" src="pngs/residents/3decide.jpg">
-        <img id="adapttech" src="pngs/residents/adapttech.jpg">
-        <img id="tonicapp" src="pngs/residents/tonicapp.jpg">
-        <img id="musicverb" src="pngs/residents/musicverb.jpg">
-        <img id="nuada" src="pngs/residents/nuada.jpg">
-        <img id="shiftforward" src="pngs/residents/shiftforward.jpg">
-        <img id="laborders" src="pngs/residents/laborders.jpg">
-        <img id="infraspeak" src="pngs/residents/infraspeak.jpg">
-        <img id="oko" src="pngs/residents/oko.jpg">
-        <img id="adapttech" src="pngs/residents/adapttech.jpg">
-        <img id="you" src="pngs/residents/you.jpg">
-        <img id="zappy" src="pngs/residents/zappy.jpg">
-        <img id="3decide" src="pngs/residents/3decide.jpg">
-        <img id="bitmaker" src="pngs/residents/bitmaker.jpg">
-        <img id="thermosite" src="pngs/residents/thermosite.jpg">
-        <img id="tnds" src="pngs/residents/tnds.jpg">
+          <img id="founders_logo" src="pngs/founders/founders.png">
+          <img id="founders_building" src="pngs/founders/building.png">
+          <img id="acsendo" src="pngs/residents/acsendo.jpg">
+          <img id="emitu" src="pngs/residents/emitu.jpg">
+          <img id="xhockware" src="pngs/residents/xhockware.jpg">
+          <img id="3decide" src="pngs/residents/3decide.jpg">
+          <img id="adapttech" src="pngs/residents/adapttech.jpg">
+          <img id="tonicapp" src="pngs/residents/tonicapp.jpg">
+          <img id="musicverb" src="pngs/residents/musicverb.jpg">
+          <img id="nuada" src="pngs/residents/nuada.jpg">
+          <img id="shiftforward" src="pngs/residents/shiftforward.jpg">
+          <img id="laborders" src="pngs/residents/laborders.jpg">
+          <img id="infraspeak" src="pngs/residents/infraspeak.jpg">
+          <img id="oko" src="pngs/residents/oko.jpg">
+          <img id="adapttech" src="pngs/residents/adapttech.jpg">
+          <img id="you" src="pngs/residents/you.jpg">
+          <img id="zappy" src="pngs/residents/zappy.jpg">
+          <img id="3decide" src="pngs/residents/3decide.jpg">
+          <img id="bitmaker" src="pngs/residents/bitmaker.jpg">
+          <img id="thermosite" src="pngs/residents/thermosite.jpg">
+          <img id="tnds" src="pngs/residents/tnds.jpg">
       </a-assets>
 
       <!-- Cylinder -->
 
       <a-entity id="cylinder">
         <a-cylinder position="0 0.5 0" radius="4" height="1.6" side="back" open-ended="true"
-                    color="#FFF" segments-radial="24"></a-cylinder>
+                    color="#FFF" segments-radial="24">
+        </a-cylinder>
       </a-entity>
 
       <!-- Founders -->
@@ -54,13 +63,14 @@
       <a-curvedimage id="founders_logo" src="#founders_logo" radius="5.7" theta-length="30" height="1"
                      position="0 4 2" opacity="1">
         <a-animation attribute="rotation" from="0 10 0" to="0 165 0" delay="500"
-                     dur="1000"></a-animation>
+                     dur="1000">
+        </a-animation>
       </a-curvedimage>
 
       <a-curvedimage id="founders_building" src="#founders_building" height="3.0" radius="4.5" theta-length="60"
        scale="0.8 0.8 0.8" position="0 1.5 0">
-      <a-animation attribute="rotation" from="0 350 0" to="0 150 0" delay="500"
-                     dur="1000"></a-animation>
+      <a-animation attribute="rotation" from="0 350 0" to="0 150 0" delay="500"dur="1000">
+        </a-animation>
       </a-curvedimage>
 
       <a-gltf-model id="marker" src="#marker" position="0 1 -2" scale="0.2 0.2 0.2" gltf-model="poly/marker/model.gltf">
@@ -93,110 +103,54 @@
       <!--Logos-->
 
       <a-entity id="logos" position="0.75 -0.75 3.5" rotation="0 180 0" scale="0.5 0.5 0.5">
-          <a-entity geometry="primitive:plane;height:2.5" id="0" position="-1.5 0.75 0" ></a-entity>
-          <a-entity geometry="" id="logobox"  
-          event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-          event-set__leave="_event: mouseleave; scale: 1 1 1"    
-          material="src:#acsendo" >
-          </a-entity>
-          <a-entity position="1.5 0 0" geometry="" id="logobox-2"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#emitu">
-          </a-entity>
-          <a-entity position="3 0 0" geometry="" id="logobox-3"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#xhockware">
-          </a-entity>
-          <a-entity position="0 1.5 0" geometry="" id="logobox-4"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#3decide">
-          </a-entity>
-          <a-entity position="1.5 1.5 0" geometry="" id="logobox-5"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#adapttech">
-          </a-entity>
-          <a-entity position="3 1.5 0" geometry="" id="logobox-6"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#tonicapp">
-          </a-entity>
-          <a-entity position="0 3 0" geometry="" id="logobox-7"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#musicverb">
-          </a-entity>
-          <a-entity position="1.5 3 0" geometry="" id="logobox-8"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#nuada">
-          </a-entity>
-          <a-entity position="3 3 0" geometry="" id="logobox-9"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#shiftforward">
-          </a-entity>
-          <a-entity position="0 4.5 0" geometry="" id="logobox-10"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#laborders">
-          </a-entity>
-          <a-entity position="1.5 4.5 0" geometry="" id="logobox-11"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#oko"></a-entity>
-            <a-entity position="3 4.5 0" geometry="" id="logobox-11"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#infraspeak">
-          </a-entity>
-          <a-entity position="3 7.5 0" geometry="" id="logobox-12"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#adapttech">
-          </a-entity>
-          <a-entity position="0 6 0" geometry="" id="logobox-13"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#you">
-          </a-entity>
-          <a-entity position="1.5 6 0" geometry="" id="logobox-14"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#zappy">
-          </a-entity>
-          <a-entity position="3 6 0" geometry="" id="logobox-15"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#3decide">
-          </a-entity>
-          <a-entity position="0 7.5 0" geometry="" id="logobox-15"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#bitmaker">
-          </a-entity>
-          <a-entity position="1.5 7.5 0" geometry="" id="logobox-15"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#thermosite">
-          </a-entity>
-          <a-entity position="1.5 -1.5 0" geometry="" id="logobox-16"
-            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
-            event-set__leave="_event: mouseleave; scale: 1 1 1"
-            material="src:#tnds">
-          </a-entity>
-
-        </a-entity>
+      <a-entity geometry="primitive:plane;height:2.5" id="0" position="-1.5 0.75 0">
+      </a-entity>
+      <a-entity geometry="" id="logobox" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#acsendo">
+      </a-entity>
+      <a-entity position="1.5 0 0" geometry="" id="logobox-2" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#emitu">
+      </a-entity>
+      <a-entity position="3 0 0" geometry="" id="logobox-3" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#xhockware">
+      </a-entity>
+      <a-entity position="0 1.5 0" geometry="" id="logobox-4" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#3decide">
+      </a-entity>
+      <a-entity position="1.5 1.5 0" geometry="" id="logobox-5" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#adapttech">
+      </a-entity>
+      <a-entity position="3 1.5 0" geometry="" id="logobox-6" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#tonicapp">
+      </a-entity>
+      <a-entity position="0 3 0" geometry="" id="logobox-7" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#musicverb">
+      </a-entity>
+      <a-entity position="1.5 3 0" geometry="" id="logobox-8" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#nuada">
+      </a-entity>
+      <a-entity position="3 3 0" geometry="" id="logobox-9" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#shiftforward">
+      </a-entity>
+      <a-entity position="0 4.5 0" geometry="" id="logobox-10" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#laborders">
+      </a-entity>
+      <a-entity position="1.5 4.5 0" geometry="" id="logobox-11" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#oko">
+      </a-entity>
+      <a-entity position="3 4.5 0" geometry="" id="logobox-11" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#infraspeak">
+      </a-entity>
+      <a-entity position="3 7.5 0" geometry="" id="logobox-12" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#adapttech">
+      </a-entity>
+      <a-entity position="0 6 0" geometry="" id="logobox-13" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#you">
+      </a-entity>
+      <a-entity position="1.5 6 0" geometry="" id="logobox-14" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#zappy">
+      </a-entity>
+      <a-entity position="3 6 0" geometry="" id="logobox-15" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#3decide">
+      </a-entity>
+      <a-entity position="0 7.5 0" geometry="" id="logobox-15" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#bitmaker">
+      </a-entity>
+      <a-entity position="1.5 7.5 0" geometry="" id="logobox-15" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#thermosite">
+      </a-entity>
+      <a-entity position="1.5 -1.5 0" geometry="" id="logobox-16" event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2" event-set__leave="_event: mouseleave; scale: 1 1 1" material="src:#tnds">
+      </a-entity>
+    </a-entity>
 
       <!--Lights -->
-    
+
       <!-- <a-light type="directional" color="#fff" position="3.487 7.081 1.876" rotation="-34.09098881028398 -121.75353146529994 20.683776404222723" light="intensity:2;castShadow:true"></a-light> -->
       <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
       <a-light type="ambient"  intensity="0.2" color="#fff"></a-light>
-      
+
       <!-- Camera -->
 
       <a-entity position="0 1.6 0" camera look-controls>
@@ -204,5 +158,30 @@
       </a-entity>
 
     </a-scene>
+
+
+        <div class="navBar">
+          <div>
+            <ul>
+              <div onclick="next()">
+                <li>
+                  <h3>Events</h3>
+                </li>
+                <li>
+                  <h3>Building</h3>
+                </li>
+                <li>
+                  <h3>Funders Caffe</h3>
+                </li>
+                <li>
+                  <h3>Companies</h3>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+
+    <script src="app.js"></script>
   </body>
 </html>
