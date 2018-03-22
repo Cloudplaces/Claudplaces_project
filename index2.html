@@ -47,7 +47,7 @@
         <img id="title_residents" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/residents.png">
         <img id="menu" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/menu.png">
         <img id="cloudplaces" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/4544af56/pngs/titles/presents.png">
-        <img id="event_tnds" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/4544af56/pngs/titles/tnds.png">
+        <img id="event_tnds" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/4544af56/pngs/titles/event_tnds.png">
 
 
         
@@ -72,6 +72,7 @@
         position="0 3.5 0" opacity="1" rotation="0 -118 0" material="" geometry="radius:3;thetaLength:55">
         <a-animation attribute="position" from="0 3.5 0" to="0 3.75 0" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
       </a-curvedimage>
+  
 
       <a-curvedimage id="title_menu" src="#title_menu" radius="5.7" theta-length="30" height="1" 
         position="0 3.5 0" opacity="1" rotation="0 56.686 0" material="" geometry="radius:3;thetaLength:55">
@@ -116,7 +117,8 @@
       <!-- Event -->
 
       <a-entity id="event" rotation="0 90 0">
-        <a-entity position="0 1.5 -2.7" id="eventplane" geometry="primitive:plane;height:2" material="color:#c0c0c0"></a-entity>
+          
+        
         <a-entity position="0 0.5 -2.2" rotation="-90.012 0 0" id="eventplane-2" geometry="primitive:plane" material="color:#c0c0c0"></a-entity>
         <a-gltf-model id="projector" src="#projector" position="0 1 -2">
           <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
