@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cloudplaces MVP</title>
+    <meta name="description" content="Cloudplaces MVP">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene stats background="color: #ECECEC">
+
+      <!-- Assets -->
+
+      <a-assets>
+        <a-asset-item id="projector" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/projector/model.gltf"></a-asset-item>
+        <a-asset-item id="blackboard" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/blackboard/Blackboard.gltf"></a-asset-item>
+        <a-asset-item id="chicken" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/chicken/CHAHIN_DRUMSTICK_CHICKEN.gltf"></a-asset-item>
+        <a-asset-item id="burguer" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/burguer/Hamburger_01.gltf"></a-asset-item>
+        <a-asset-item id="bowl" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/bowl/Bowl_01.gltf"></a-asset-item>
+        <a-asset-item id="marker" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/marker/model.gltf"></a-asset-item>
+        <a-asset-item id="building" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/poly/building/model.gltf"></a-asset-item>
+        <img id="founders_logo" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/founders/founders.png">
+        <img id="founders_building" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/founders/building.png">
+        <img id="acsendo" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/acsendo.jpg">
+        <img id="emitu" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/emitu.jpg">
+        <img id="xhockware" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/xhockware.jpg">
+        <img id="3decide" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/3decide.jpg">
+        <img id="adapttech" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/adapttech.jpg">
+        <img id="tonicapp" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/tonicapp.jpg">
+        <img id="musicverb" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/musicverb.jpg">
+        <img id="nuada" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/nuada.jpg">
+        <img id="shiftforward" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/shiftforward.jpg">
+        <img id="laborders" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/laborders.jpg">
+        <img id="infraspeak" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/infraspeak.jpg">
+        <img id="oko" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/oko.jpg">
+        <img id="adapttech" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/adapttech.jpg">
+        <img id="you" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/you.jpg">
+        <img id="zappy" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/zappy.jpg">
+        <img id="3decide" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/3decide.jpg">
+        <img id="bitmaker" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/bitmaker.jpg">
+        <img id="thermosite" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/thermosite.jpg">
+        <img id="tnds" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/residents/tnds.jpg">
+        <img id="title_events" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/events.png">
+        <img id="title_menu" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/today.png">
+        <img id="title_residents" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/residents.png">
+        <img id="menu" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/menu.png">
+        <img id="presents" src="https://cdn.rawgit.com/Cloudplaces/Cloudplaces_project/0319d59f/pngs/titles/presents.png">
+
+
+        
+      </a-assets>
+
+      <!-- Cylinder -->
+
+      <!-- <a-sky src="#hdri"></a-sky> -->
+
+
+      <a-entity id="cylinder">
+        <a-cylinder position="0 0.5 0" radius="4" height="1.6" side="back" open-ended="true"
+                    color="#00bcd4" segments-radial="24">
+        </a-cylinder>
+      </a-entity>
+
+      
+
+      <!-- Titles -->
+
+      <a-curvedimage id="title_events" src="#title_events" radius="5.7" theta-length="30" height="1" 
+        position="0 3.5 0" opacity="1" rotation="0 -118 0" material="" geometry="radius:3;thetaLength:55">
+        <a-animation attribute="position" from="0 3.5 0" to="0 3.75 0" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+      </a-curvedimage>
+
+      <a-curvedimage id="title_menu" src="#title_menu" radius="5.7" theta-length="30" height="1" 
+        position="0 3.5 0" opacity="1" rotation="0 56.686 0" material="" geometry="radius:3;thetaLength:55">
+        <a-animation attribute="position" from="0 3.5 0" to="0 3.75 0" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+      </a-curvedimage>
+
+      <a-curvedimage id="title_residents" src="#title_residents" radius="5.7" theta-length="30" height="1" 
+        position="0 3.5 0" opacity="1" rotation="0 -26.872 0" material="" geometry="radius:3;thetaLength:55">
+        <a-animation attribute="position" from="0 3.5 0" to="0 3.75 0" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+      </a-curvedimage>
+
+      <!-- Founders -->
+
+      <a-curvedimage id="founders_logo" src="#founders_logo" radius="5.7" theta-length="30" height="1"
+                     position="0 4 0" opacity="1">
+        <a-animation attribute="rotation" from="0 10 0" to="0 165 0" delay="3000"
+                     dur="1000"></a-animation>
+        <!-- <a-animation attribute="rotation" from="0 165 0" to="0 10 0" dur="10000" direction="alternate" easing="linear" repeat="indefinite"></a-animation> -->
+      </a-curvedimage>
+
+      <a-curvedimage id="founders_building" src="#founders_building" height="3.0" radius="4.5" theta-length="60"
+       scale="0.8 0.8 0.8" position="0 1.5 0">
+      <a-animation attribute="rotation" from="0 350 0" to="0 150 0" delay="3000"
+                     dur="1000"></a-animation>
+      </a-curvedimage>
+
+      <a-gltf-model id="marker" src="#marker" position="0 10 -2" scale="0.2 0.2 0.2">
+        <a-animation attribute="position" from="0 10 -2" to="0 1.5 -2" delay="3000" dur="1000"></a-animation>
+
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
+      </a-gltf-model>
+
+      <a-gltf-model id="building" src="#building" position="0 10 -2" scale="0.5 0.5 0.5" rotation="0 -30 0">
+        <a-animation attribute="position" from="0 -10 -2" to="0 1 -2" delay="3000" dur="1000"></a-animation>
+
+      </a-gltf-model>
+
+      <!-- <a-curvedimage id="presents" src="#presents" radius="5.7" theta-length="30" height="1"
+                     position="0 4 0" rotation="0 165 0"></a-curvedimage> -->
+
+      <!-- Event -->
+
+      <a-entity id="event" rotation="0 90 0">
+        <a-entity position="0 1.5 -2.7" id="eventplane" geometry="primitive:plane;height:2" material="color:#c0c0c0"></a-entity>
+        <a-entity position="0 0.5 -2.2" rotation="-90.012 0 0" id="eventplane-2" geometry="primitive:plane" material="color:#c0c0c0"></a-entity>
+        <a-gltf-model id="projector" src="#projector" position="0 1 -2">
+          <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="indefinite"></a-animation>
+        </a-gltf-model>
+      </a-entity>
+
+      <!-- Food -->
+
+      <a-entity id="food" position="0.8 0 1" rotation="0.401 45 -0.115">
+        <a-gltf-model id="blackboard-1" src="#blackboard" position="1.2 1.5 0" rotation="-15.01149423242757 -90.01166961505233 90.01166961505233" >
+          <a-entity id="leg-1" position="-0.5 0.2 -0.03" geometry="depth:0.02;height:0.02;width:0.5" material="color:#482400"></a-entity>
+          <a-entity id="leg-2" position="-0.5 -0.2 -0.03" geometry="depth:0.02;height:0.02;width:0.5" material="color:#482400"></a-entity>
+          <a-entity id="leg-3" position="-0.233 0 -0.37" geometry="depth:0.02;height:0.02" material="color:#482400" rotation="0 -42.055102162602424 0"></a-entity>
+          
+          <a-gltf-model id="chicken" src="#chicken" position="0.4625587287278791 -0.4161069495845332 0.3889218202331588" rotation="15.29797312999298 116.65420708863562 32.77318588148309" scale="0.3 0.3 0.3">
+            <a-animation attribute="rotation" from="15 116 32" to="15 125 49" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+          </a-gltf-model>
+          
+          <a-gltf-model id="burguer" src="#burguer" position="-0.024 -0.159 0.093" rotation="-25.38203032429547 3.8961130068895984 -26.069579678452456" scale="0.03 0.03 0.03" >
+            <a-animation attribute="rotation" from="-25 3.9 -26" to="-30 3.9 -40" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+          </a-gltf-model>
+          
+          <a-gltf-model id="bowl" src="#bowl" position="-0.512 -0.399 0.272" rotation="-33.518031015153156 -19.881635491039564 -90.52733163067008" scale="0.04 0.04 0.04" >
+            <a-animation attribute="rotation" from="-33 -19 -85" to="-25 -19 -97" dur="2000" direction="alternate" easing="linear" repeat="indefinite"></a-animation>
+          </a-gltf-model>
+        
+        </a-gltf-model>
+       
+        <a-entity id="menu"  geometry="height:2" src="#menu" height="1"  position="2.635 1.392 0.12"  rotation="-1.8907607239317168 -117.39905222230567 0.17188733853924698" material="src:#menu;opacity:0"
+          event-set__enter="_event: mouseenter; material:opacity: 1"
+          event-set__leave="_event: mouseleave; material:opacity: 0">
+          <a-entity id"placeholder"="" geometry="width:4" position="0.5546748529283212 -0.04748894890694203 1.154401714875196" scale="0.294 1.653 1" material="visible:false" id="placeholder" rotation="-0.11459155902616465 -21.371325758379708 -0.8021409131831525"></a-entity>
+        </a-entity>   
+                   
+      </a-entity>
+
+      <!--Residents-->
+
+      <a-entity id="logos" position="0.75 -0.75 3.5" rotation="0 180 0" scale="0.5 0.5 0.5" src="#0">
+          <a-entity text="value: Hello World;" geometry="primitive:plane;height:2.5" id="0" position="-1.5 0.75 0" ></a-entity>
+          <a-entity geometry="" id="logobox"  
+          event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+          event-set__leave="_event: mouseleave; scale: 1 1 1"    
+          material="src:#acsendo" >
+          </a-entity>
+          <a-entity position="1.5 0 0" geometry="" id="logobox-2"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#emitu">
+          </a-entity>
+          <a-entity position="3 0 0" geometry="" id="logobox-3"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#xhockware">
+          </a-entity>
+          <a-entity position="0 1.5 0" geometry="" id="logobox-4"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#3decide">
+          </a-entity>
+          <a-entity position="1.5 1.5 0" geometry="" id="logobox-5"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#adapttech">
+          </a-entity>
+          <a-entity position="3 1.5 0" geometry="" id="logobox-6"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#tonicapp">
+          </a-entity>
+          <a-entity position="0 3 0" geometry="" id="logobox-7"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#musicverb">
+          </a-entity>
+          <a-entity position="1.5 3 0" geometry="" id="logobox-8"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#nuada">
+          </a-entity>
+          <a-entity position="3 3 0" geometry="" id="logobox-9"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#shiftforward">
+          </a-entity>
+          <a-entity position="0 4.5 0" geometry="" id="logobox-10"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#laborders">
+          </a-entity>
+          <a-entity position="1.5 4.5 0" geometry="" id="logobox-11"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#oko"></a-entity>
+            <a-entity position="3 4.5 0" geometry="" id="logobox-11"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#infraspeak">
+          </a-entity>
+          <a-entity position="3 7.5 0" geometry="" id="logobox-12"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#adapttech">
+          </a-entity>
+          <a-entity position="0 6 0" geometry="" id="logobox-13"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#you">
+          </a-entity>
+          <a-entity position="1.5 6 0" geometry="" id="logobox-14"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#zappy">
+          </a-entity>
+          <a-entity position="3 6 0" geometry="" id="logobox-15"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#3decide">
+          </a-entity>
+          <a-entity position="0 7.5 0" geometry="" id="logobox-15"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#bitmaker">
+          </a-entity>
+          <a-entity position="1.5 7.5 0" geometry="" id="logobox-15"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#thermosite">
+          </a-entity>
+          <a-entity position="1.5 -1.5 0" geometry="" id="logobox-16"
+            event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__leave="_event: mouseleave; scale: 1 1 1"
+            material="src:#tnds">
+          </a-entity>
+
+        </a-entity>
+
+      <!--Lights -->
+    
+      <a-light type="directional" color="#fff" intensity="0.7" position="0 1 1"></a-light>
+      <a-light type="ambient"  intensity="0.7" color="#fff"></a-light>
+      
+      <!-- Camera -->
+
+      <a-entity position="0 1.6 0" camera look-controls>
+      <a-entity></a-entity>
+        <a-cursor opacity="0.2"></a-cursor>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
